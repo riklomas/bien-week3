@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bien Reviews – the best restaurants in the world</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <%= link_to root_path do %>
+          <%= image_tag "bien-logo.svg" %>
+        <% end %>
+      </h1>
+      
+      <h2>The best restaurants in the world</h2>
+      <nav>
+        <%= link_to "Add a review", new_review_path %>
+      </nav>
+    </header>    
+    
+    <%= yield %>
+    
+    <footer>
+      Copyright 2017 Bien Reviews
+    </footer>
+  </body>
+</html>
