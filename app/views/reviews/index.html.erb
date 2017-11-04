@@ -1,3 +1,5 @@
+<% content_for :page_title, "Homepage" %>
+
 <% @reviews.each do |review| %>
   <div class="review">
     <%= link_to review.title, review_path(review) %>
