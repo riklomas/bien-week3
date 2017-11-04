@@ -1,18 +1,18 @@
 <% content_for :page_title, "Homepage" %>
 
 <nav class="filters">
-  <%= link_to "All restaurants", root_path %>
+  <%= active_link_to "All restaurants", root_path, active: { price: nil, cuisine: nil, location: nil } %>
   
   <div>
-    <%= link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location) %>
-    <%= link_to "$$", root_path(price: 2, cuisine: @cuisine, location: @location) %>
-    <%= link_to "$$$", root_path(price: 3, cuisine: @cuisine, location: @location) %>
+    <%= active_link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location), active: { price: 1 } %>
+    <%= active_link_to "$$", root_path(price: 2, cuisine: @cuisine, location: @location), active: { price: 2 } %>
+    <%= active_link_to "$$$", root_path(price: 3, cuisine: @cuisine, location: @location), active: { price: 3 } %>
   </div>
   
   <div>
-    <%= link_to "Indian", root_path(cuisine: "Indian", price: @price, location: @location) %>
-    <%= link_to "Mexican", root_path(cuisine: "Mexican", price: @price, location: @location) %>
-    <%= link_to "American", root_path(cuisine: "American", price: @price, location: @location) %>
+    <%= active_link_to "Indian", root_path(cuisine: "Indian", price: @price, location: @location), active: { cuisine: "Indian" } %>
+    <%= active_link_to "Mexican", root_path(cuisine: "Mexican", price: @price, location: @location), active: { cuisine: "Mexican" } %>
+    <%= active_link_to "American", root_path(cuisine: "American", price: @price, location: @location), active: { cuisine: "American" } %>
   </div>
   
   <form action="/">

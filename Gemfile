@@ -37,6 +37,8 @@ gem "geocoder"
 # make our forms nice and easy
 gem "simple_form"
 
+# make our filters active
+gem "active_link_to"
 
 
 
