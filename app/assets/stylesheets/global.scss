@@ -26,6 +26,10 @@ header, main, footer {
   padding: 20px 30px 20px 30px;
 }
 
+a {
+  color: $green;
+}
+
 header {
   background: $lightyellow;
   display: flex;
@@ -47,6 +51,28 @@ main {
 
 footer {
   font-size: 14px;
-  color: #999;
+  color: #999999;
 }
+
+label {
+  display: block;
+}
+
+input, textarea {
+  font-size: 18px;
+  min-width: 400px;
+  border: 1px solid #cccccc;
+  padding: 7px 10px;
+}
+
+input[type=submit] {
+  background: $orange;
+  color: white;
+  border-color: $orange;
+}
+
+textarea {
+  min-height: 400px;
+}
+
 
