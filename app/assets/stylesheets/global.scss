@@ -107,3 +107,13 @@ nav.filters {
   }
 }
 
+.comment {
+  font-size: 14px;
+  border-bottom: 2px solid $lightyellow;
+  
+  p.posted {
+    color: #999999;
+    font-size: 12px;
+  }
+}
+
