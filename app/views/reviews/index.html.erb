@@ -2,13 +2,27 @@
 
 <nav class="filters">
   <%= link_to "All restaurants", root_path %>
-  <%= link_to "$", root_path(price: 1, cuisine: @cuisine) %>
-  <%= link_to "$$", root_path(price: 2, cuisine: @cuisine) %>
-  <%= link_to "$$$", root_path(price: 3, cuisine: @cuisine) %>
   
-  <%= link_to "Indian", root_path(cuisine: "Indian", price: @price) %>
-  <%= link_to "Mexican", root_path(cuisine: "Mexican", price: @price) %>
-  <%= link_to "American", root_path(cuisine: "American", price: @price) %>
+  <div>
+    <%= link_to "$", root_path(price: 1, cuisine: @cuisine, location: @location) %>
+    <%= link_to "$$", root_path(price: 2, cuisine: @cuisine, location: @location) %>
+    <%= link_to "$$$", root_path(price: 3, cuisine: @cuisine, location: @location) %>
+  </div>
+  
+  <div>
+    <%= link_to "Indian", root_path(cuisine: "Indian", price: @price, location: @location) %>
+    <%= link_to "Mexican", root_path(cuisine: "Mexican", price: @price, location: @location) %>
+    <%= link_to "American", root_path(cuisine: "American", price: @price, location: @location) %>
+  </div>
+  
+  <form action="/">
+    <input type="text" name="location" 
+        placeholder="Search location..." value="<%= @location %>">
+        
+    <input type="hidden" name="price" value="<%= @price %>">    
+    <input type="hidden" name="cuisine" value="<%= @cuisine %>">
+  </form>
+  
 </nav>
 
 <% @reviews.each do |review| %>
