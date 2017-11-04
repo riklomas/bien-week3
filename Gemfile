@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # add in our geocoding
 gem "geocoder"
 
+# make our forms nice and easy
+gem "simple_form"
+
 
 
 
