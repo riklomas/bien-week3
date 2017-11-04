@@ -1,21 +1,52 @@
 $green: #3BC8AA;
 $orange: #FF551A;
 $black: #1E1E1E;
+$lightyellow: #ffeccf;
 
 $titleFont: "PT Serif";
 $bodyFont: "Work Sans";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: $black;
   font-family: $bodyFont;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
 }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-family: $titleFont;
 }
 
-h2 {
-  font-family: $titleFont;
-  color: $green;
+header, main, footer {
+  padding: 20px 30px 20px 30px;
+}
+
+header {
+  background: $lightyellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  h1 {
+    margin: 0;
+    
+    img {
+      width: 80px;
+    }
+  }
+}
+
+main {
+  min-height: calc(100vh - 150px);
+}
+
+footer {
+  font-size: 14px;
+  color: #999;
 }
 
