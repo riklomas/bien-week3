@@ -50,7 +50,7 @@ gem "simple_form"
 # make our filters active
 gem "active_link_to"
 
-
+gem "profanity_filter"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
