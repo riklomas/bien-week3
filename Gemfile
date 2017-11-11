@@ -50,6 +50,9 @@ gem "simple_form"
 # make our filters active
 gem "active_link_to"
 
+# make sure no one is swearing
+gem "profanity_filter"
+
 
 
 # Use Capistrano for deployment
