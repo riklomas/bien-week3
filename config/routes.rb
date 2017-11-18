@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   resources :users
   
   resource :session
+  
+  get "about", to: "pages#about"
+  get "terms", to: "pages#terms"
 
-  root "reviews#index"
+  root "pages#home"
     
 end

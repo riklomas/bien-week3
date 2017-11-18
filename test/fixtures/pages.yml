@@ -2,12 +2,12 @@
 
 one:
   title: MyString
-  url: MyString
   body: MyText
+  url: MyString
   image: MyString
 
 two:
   title: MyString
-  url: MyString
   body: MyText
+  url: MyString
   image: MyString

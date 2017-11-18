@@ -1,0 +1,15 @@
+<%= image_tag @content.image %>
+
+<h1><%= @content.title %></h1>
+
+<%= simple_format @content.body %>
+
+<h2>Highly rated reviews</h2>
+
+<% @highly_rated_reviews.each do |review| %>
+  <p>
+    <%= link_to review.title, review_path(review) %> (<%= review.score %>/10, rated by 
+    
+      <% if review.user.present? %><%= review.user.username %><% else %>anonymous<% end %>)
+  </p>
+<% end %>
