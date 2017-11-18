@@ -58,6 +58,13 @@ gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem "fog-aws"
 
+# add admin panel
+gem 'activeadmin'
+gem 'devise'
+gem 'cancan'
+gem 'draper'
+gem 'pundit'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

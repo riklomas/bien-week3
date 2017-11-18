@@ -21,6 +21,11 @@
         <% if is_logged_in? %>
         
           <%= @current_user.username %>
+          
+          <% if @current_user.is_admin? %>
+            <%= link_to "Admin", admin_root_path %>
+          <% end %>
+          
           <%= link_to "Add a review", new_review_path %>
           <%= link_to "Log out", session_path, method: :delete %>
           
