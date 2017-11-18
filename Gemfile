@@ -53,6 +53,9 @@ gem "active_link_to"
 # make sure no one is swearing
 gem "profanity_filter"
 
+# lets add uploading files
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
 
 
 # Use Capistrano for deployment

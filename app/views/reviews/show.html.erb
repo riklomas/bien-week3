@@ -1,5 +1,7 @@
 <% content_for :page_title, @review.title %>
 
+<%= image_tag @review.photo.medium %>
+
 <h1><%= @review.title %></h1>
 <h2><%= @review.restaurant %></h2>
 
@@ -60,7 +62,10 @@
 
 <% if @review.user == @current_user %>
   <div class="actions">
-    <%= link_to "Edit this review", edit_review_path(@review) %>
+    <% if @review.created_at > 1.hour.ago %>
+      <%= link_to "Edit this review", edit_review_path(@review) %>
+    <% end %>
+    
     <%= link_to "Delete this review", review_path(@review), method: :delete, data: { confirm: "Are you sure??" } %>
   </div>
 <% end %>

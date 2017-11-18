@@ -31,6 +31,8 @@
 <% @reviews.each do |review| %>
   <div class="review">
     <%= link_to review_path(review) do %>
+    
+      <%= image_tag review.photo.thumb %>
       
       <h2><%= review.title %></h2>
       <p>
