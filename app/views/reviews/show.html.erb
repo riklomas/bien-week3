@@ -62,7 +62,7 @@
 
 <% if @review.user == @current_user %>
   <div class="actions">
-    <% if @review.created_at > 1.hour.ago %>
+    <% if @review.created_at > 4.hours.ago %>
       <%= link_to "Edit this review", edit_review_path(@review) %>
     <% end %>
     

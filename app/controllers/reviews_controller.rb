@@ -78,7 +78,7 @@ class ReviewsController < ApplicationController
     
     if @review.user != @current_user
       redirect_to root_path
-    elsif @review.created_at < 1.hour.ago
+    elsif @review.created_at < 4.hours.ago
       redirect_to review_path(@review)
     end
   end

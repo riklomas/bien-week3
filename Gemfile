@@ -56,6 +56,7 @@ gem "profanity_filter"
 # lets add uploading files
 gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
+gem "fog-aws"
 
 
 # Use Capistrano for deployment
