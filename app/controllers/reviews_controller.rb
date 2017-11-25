@@ -45,6 +45,8 @@ class ReviewsController < ApplicationController
     # if it is, we're go the home page again
     # if it isn't, show the new form
     if @review.save
+      flash[:succces] = "Your review was posted!"
+      
       redirect_to root_path
     else
       # show the view for new.html.erb

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   
   resource :session
   
+  resource :account
+  
   get "about", to: "pages#about"
   get "terms", to: "pages#terms"
 
