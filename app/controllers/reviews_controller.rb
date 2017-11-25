@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
     @cuisine = params[:cuisine]
     @location = params[:location]
     
+    
     # start with all the reviews
     @reviews = Review.all
     
